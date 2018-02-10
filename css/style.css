@@ -1,69 +1,232 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
 body {
-  padding: 0;
-  margin: 0;
+	font-family: 'Open Sans', sans-serif;
 }
 
- header {
-   width: 10%;
-   height: 20%;
-   background: #000000;
- }
-
- body {
-  padding: 0;
-  margin: 0;
-
-}
-
-
+/*---------------------------Header------------------------------------------*/
 header {
-  width: 100%;
-  height: 20px;
-  background: #000000;
- }
+	width: 100%;
+	height: 90px;
+	background: #000;
+	color: #fff;
+  border-bottom: 5px solid #FF0099;
 
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 100;
+}
+
+.contenedor {
+	width: 98%;
+	margin: auto;
+}
 
 h1 {
-  margin:0;
-  font-family: cursive;
-  font-size: 50px;
-  color: #FFEB3B;
-  background: #000;
-  text-align: center;
+	text-align: center;
+  margin-top: 10px;
+  color:#F4D03F;
+  font-family: 'Exo', sans-serif;
+  font-family: 'Exo 2', sans-serif;
+  font-family: 'Rajdhani', sans-serif;
+  font-family: 'Russo One', sans-serif;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 30px;
+}
+
+header .contenedor {
+	display: table;
+}
+/*---------------------------Social-Menu-------------------------------------------*/
+.social {
+  position: fixed;
+  margin: auto;
+  padding: 0;
+	top: 0;
+	left: 0;
+	z-index: 100;
+  display: inline-block;
+
 }
 
 
-.menu  {
-  margin :auto;
-  display: flex;
+.social ul li {
+  display: inline-block;
+  color: #FF0099;
+  padding: 10px 10px ;
+  font-size: 15px;
+  margin-top: 50px;
+
 }
 
+
+.social ul li a {
+   word-spacing: 30px;
+   text-decoration: none;
+   color: #E309AD;
+   display: flex;
+
+
+ }
+
+section {
+	width: 100%;
+	margin-bottom: 25px;
+  top: 100px;
+}
+
+#bienvenido {
+	text-align: center;
+}
+
+
+#blog h3 {
+	text-align: center;
+}
+
+#blog h4 {
+	text-align: justify;
+  font-family: 'Chathura', sans-serif;
+  familia de fuentes: 'Expletus Sans', cursiva;
+  familia de fuentes: 'IM Fell Double Pica', serif;
+  font-family: 'Merienda', cursiva;
+  font-family: 'Old Standard TT', serif;
+}
+
+#blog .contenedor{
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+#blog article {
+	margin: 15px;
+}
+
+#blog img {
+	width: 100%;
+  height: 250px;
+	max-width: 280px;
+  max-height: 280px;
+}
+
+
+#info {
+	background: #333;
+	color: #fff;
+	text-align: center;
+	padding: 20px;
+}
+
+#info .contenedor {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.info-pet {
+	margin: 20px;
+}
+
+.info-pet img {
+	width: 180px;
+	height: 180px;
+	border-radius: 50%;
+	border: 7px solid #fff;
+}
+
+@media (min-width:480px) {
+	.info-pet {
+		width: 40%;
+	}
+}
+
+@media (min-width:1024px) {
+	.info-pet {
+		width: auto;
+	}
+}
+/*---------------------------Menu---------------------------------------------*/
 
 .menu ul {
+  margin: 0;
   list-style: none;
-  float: right;
-  margin-top: 0px;
+  padding: 0;
+  display: flex;
+  justify-content: flex-end;
 }
 
+.menu li:hover {
+  background: #F4D03F;
+}
 
-.menu ul li {
-  position: relative;
+.menu li a {
   display: inline-block;
-  color:  #fff;
-   background: #000;
-  padding: 10px 15px;
-}
-
-
-.menu ul li a {
+  padding: 15px 20px;
   color: #fff;
-  font-family: helvetica;
-  font-weight: bold;
   text-decoration: none;
 }
 
-
-p {
-  color: green;
-  font-family: cursive;
+/*------------------------Slider with image----------------------------------*/
+.slider {
+  width: 100%;
+  height: 20%;
+  margin: auto;
+  overflow: hidden;
 }
+
+
+.slider ul {
+  display: flex;
+  padding: 0;
+  width: 400%;
+
+  animation: cambio 30s infinite ;
+  animation-timing-function: ease;
+}
+
+.slider li {
+  list-style: none;
+  width: 100%;
+}
+
+
+.slider img  {
+  width: 100%;
+  height: 80%;
+  margin-top: 50px;
+}
+
+
+
+@keyframes cambio  {
+  0% {margin-left: 0;}
+  20% {margin-left: 0;}
+
+  25% {margin-left: -100%;}
+  45% {margin-left: -100%;}
+
+  50% {margin-left: -200%;}
+  70% {margin-left: -200%;}
+
+  75% {margin-left: -300%;}
+  100% {margin-left: -300%;}
+  }
+/*-----------------------------Footer----------------------------------*/
+footer {
+  margin: 0;
+  padding: 0;
+  text-align:center;
+  	padding: 40px;
+    color:#F4D03F;
+    background: #000;
+    font-family: 'Exo', sans-serif;
+    font-family: 'Exo 2', sans-serif;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 12px;
+  }
